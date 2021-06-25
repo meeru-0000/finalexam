@@ -1,15 +1,15 @@
 import GenericService from "./GenericService";
-class ProductsService extends GenericService {
+class gameService extends GenericService {
   constructor() {
     super();
   }
-  addProduct = (data) => this.post("products", data);
-  deleteProduct = (_id) => this.delete("products/" + _id);
-  updateProduct = (_id, data) => this.put("products/" + _id, data);
-  getProducts = (page = 1, perPage = 10) =>
-    this.get("products?page=" + page + "&perPage=" + perPage);
-  getSingleProduct = (id) => this.get("products/" + id);
+  addgame = (data) => this.post("game", data);
+  deletegame = (_id) => this.delete("game/" + _id);
+  updategame = (_id, data) => this.put("game/" + _id, data);
+  getgame = (page = 1, perPage = 10) =>
+    this.get("game?page=" + page + "&perPage=" + perPage);
+  getSinglegame = (id) => this.get("game/" + id);
 }
 
-let productService = new ProductsService();
-export default productService;
+let gameService = new gameService();
+export default gameService;
